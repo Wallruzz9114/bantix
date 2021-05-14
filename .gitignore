@@ -4,10 +4,13 @@ frontend/website/out-tsc
 frontend/website//bazel-out
 frontend/website/ssl
 frontend/website/node_modules
+frontend/website/src/environments
 
 backend/.vscode
 backend/API/bin
 backend/API/obj
+backend/Library/bin
+backend/Library/obj
 backend/API/Logs
 backend/API/Properties
 backend/API/appsettings.Development.json
