@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  userKey: 'bantix.client',
+  agencyKey: 'bantix.agency',
 };
 
 /*
