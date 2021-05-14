@@ -6,7 +6,7 @@ frontend/website/ssl
 frontend/website/node_modules
 frontend/website/src/environments
 
-backend/.vscode
+.vscode
 backend/API/bin
 backend/API/obj
 backend/Library/bin

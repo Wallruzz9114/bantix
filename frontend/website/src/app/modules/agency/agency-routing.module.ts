@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MovementsComponent } from './../../../board/components/movements/movements.component';
 import { AgencyComponent } from './agency.component';
+import { MovementsComponent } from './components/movements/movements.component';
 
 const routes: Routes = [
   {
@@ -19,4 +19,4 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AgenciaRoutingModule {}
+export class AgencyRoutingModule {}
