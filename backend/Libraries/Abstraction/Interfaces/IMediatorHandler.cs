@@ -7,7 +7,7 @@ namespace Libraries.Abstraction.Interfaces
 {
     public interface IMediatorHandler
     {
-        Task RaiseEvent<T>(T appEvent, CancellationToken cancellation = default) where T : Event;
-        Task SendCommand<T>(T command, CancellationToken cancellation = default) where T : Command;
+        Task RaiseEvent<T>(T appEvent, CancellationToken cancellationToken = default) where T : Event;
+        Task SendCommand<T>(T command, CancellationToken cancellationToken = default) where T : Command;
     }
 }

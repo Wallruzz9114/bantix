@@ -35,6 +35,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #ecf0f1;
 }
 /**
 * Generated theme by Material Theme Generator
@@ -275,4 +276,16 @@ $altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 .mat-standard-chip {
   padding: 0.5em 0.85em;
   min-height: 2.5em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
