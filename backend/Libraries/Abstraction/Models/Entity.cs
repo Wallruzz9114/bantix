@@ -13,7 +13,7 @@ namespace Libraries.Abstraction.Models
 
         public int Id { get; protected set; }
 
-        public abstract bool IsConsistent();
+        public abstract bool IsValid();
 
         [NotMapped]
         public ValidationResult ValidationResult { get; protected set; }

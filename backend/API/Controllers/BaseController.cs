@@ -27,6 +27,10 @@ namespace API.Controllers
             {
                 UserId = userService.GetAuthId();
             }
+            else
+            {
+                UserId = Guid.Empty;
+            }
         }
 
         protected new IActionResult Response(object result = null)

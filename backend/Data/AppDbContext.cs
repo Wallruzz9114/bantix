@@ -7,6 +7,8 @@ namespace Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Agency> Agencies { get; set; }
+        public DbSet<Agent> Agents { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }

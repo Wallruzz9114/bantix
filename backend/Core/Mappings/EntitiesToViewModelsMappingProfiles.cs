@@ -1,6 +1,6 @@
 using AutoMapper;
-using Core.ViewModels;
 using Data.Entities;
+using Data.ViewModels;
 
 namespace Core.Mappings
 {
@@ -8,8 +8,8 @@ namespace Core.Mappings
     {
         public EntitiesToViewModelsMappingProfiles()
         {
-            CreateMap<Agency, AgencyViewModel>();
-            CreateMap<AgencyViewModel, Agency>()
+            CreateMap<Agent, AgentViewModel>();
+            CreateMap<AgentViewModel, Agent>()
                 .ForMember(dest => dest.Password, opt => opt.Ignore());
         }
     }
