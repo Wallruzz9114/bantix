@@ -5,13 +5,13 @@ using Data.Repositories.Interfaces;
 
 namespace Data.Repositories.Implementations
 {
-    public class AgencyRepository : Repository<Agency>, IAgencyRepository, IDisposable
+    public class AgentRepository : Repository<Agent>, IAgentRepository, IDisposable
     {
-        public AgencyRepository(AppDbContext dbContext) : base(dbContext) { }
+        public AgentRepository(AppDbContext dbContext) : base(dbContext) { }
 
-        public Agency GetByBusinessId(string businessId)
+        public Agent GetByBusinessId(string businessId)
         {
-            return _dbContext.Agencies.SingleOrDefault(a => a.BusinessId == businessId);
+            return _dbContext.Agents.SingleOrDefault(a => a.BusinessId == businessId);
         }
 
         private bool disposed = false;

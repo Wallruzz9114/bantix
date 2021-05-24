@@ -3,8 +3,8 @@ using Libraries.Abstraction.Interfaces;
 
 namespace Data.Repositories.Interfaces
 {
-    public interface IAgencyRepository : IRepository<Agency>
+    public interface IAgentRepository : IRepository<Agent>
     {
-        Agency GetByBusinessId(string businessId);
+        Agent GetByBusinessId(string businessId);
     }
 }

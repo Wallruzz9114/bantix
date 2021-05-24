@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using Core.Services.Interfaces;
+using Data.Interfaces;
 using Libraries.Abstraction.Handlers;
 using Libraries.Abstraction.Interfaces;
 using Libraries.Abstraction.Notifications;

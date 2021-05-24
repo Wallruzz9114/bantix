@@ -9,10 +9,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BoardRoutingModule } from './board-routing.module';
 import { BoardComponent } from './board.component';
-import { MovementsComponent } from './components/movements/movements.component';
+import { BoardTransactionComponent } from './components/board-transaction/board-transaction.component';
 
 @NgModule({
-  declarations: [BoardComponent, MovementsComponent],
+  declarations: [BoardTransactionComponent, BoardComponent],
   imports: [
     CommonModule,
     BoardRoutingModule,

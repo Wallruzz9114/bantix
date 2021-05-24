@@ -12,16 +12,16 @@ import { LocalStorageUtils } from '../utils/storage/local-storage-utils';
 @Injectable({
   providedIn: 'root',
 })
-export class AgencyGuard implements CanActivateChild {
+export class AgentGuard implements CanActivateChild {
   constructor(private router: Router) {}
 
   canActivateChild(
     _childRoute: ActivatedRouteSnapshot,
     _state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const agencyToken = LocalStorageUtils.getAgencyToken();
+    const agentToken = LocalStorageUtils.getAgentToken();
 
-    if (!agencyToken) {
+    if (!agentToken) {
       this.router.navigate(['/']);
       return false;
     }

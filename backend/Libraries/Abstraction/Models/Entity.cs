@@ -1,6 +1,7 @@
 using Libraries.Abstraction.Interfaces;
 using FluentValidation.Results;
 using System.ComponentModel.DataAnnotations.Schema;
+using System;
 
 namespace Libraries.Abstraction.Models
 {
@@ -11,7 +12,9 @@ namespace Libraries.Abstraction.Models
             ValidationResult = new ValidationResult();
         }
 
-        public int Id { get; protected set; }
+        [System.ComponentModel.DataAnnotations.Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; protected set; }
 
         public abstract bool IsConsistent();
 

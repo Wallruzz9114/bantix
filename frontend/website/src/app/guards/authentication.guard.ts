@@ -20,13 +20,13 @@ export class AuthenticationGuard implements CanActivateChild {
     _state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const userToken = LocalStorageUtils.getUserToken();
-    const agencyToken = LocalStorageUtils.getAgencyToken();
+    const agentToken = LocalStorageUtils.getAgentToken();
 
-    if (!userToken && !agencyToken) {
+    if (!userToken && !agentToken) {
       return true;
     }
 
-    if (userToken && agencyToken) {
+    if (userToken && agentToken) {
       LocalStorageUtils.clearStorage();
       return true;
     }
@@ -36,8 +36,8 @@ export class AuthenticationGuard implements CanActivateChild {
       return false;
     }
 
-    if (agencyToken) {
-      this.router.navigate(['/agency']);
+    if (agentToken) {
+      this.router.navigate(['/agent']);
       return false;
     }
 

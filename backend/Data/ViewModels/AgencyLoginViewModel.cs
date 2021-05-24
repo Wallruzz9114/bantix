@@ -3,7 +3,7 @@ using Libraries.Helpers;
 
 namespace Data.ViewModels
 {
-    public class AgencyLoginViewModel
+    public class AgentLoginViewModel
     {
         [Required(ErrorMessage = "Invalid identifier")]
         [MinLength(7, ErrorMessage = "Invalid identifier")]

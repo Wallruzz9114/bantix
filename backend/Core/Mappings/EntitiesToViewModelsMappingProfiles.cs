@@ -8,8 +8,8 @@ namespace Core.Mappings
     {
         public EntitiesToViewModelsMappingProfiles()
         {
-            CreateMap<Agency, AgencyViewModel>();
-            CreateMap<AgencyViewModel, Agency>()
+            CreateMap<Agent, AgentViewModel>();
+            CreateMap<AgentViewModel, Agent>()
                 .ForMember(dest => dest.Password, opt => opt.Ignore());
         }
     }

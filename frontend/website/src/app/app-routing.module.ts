@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgencyGuard } from './guards/agency.guard';
+import { AgentGuard } from './guards/agent.guard';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { UserGuard } from './guards/user.guard';
 
@@ -17,9 +17,9 @@ const routes: Routes = [
     loadChildren: () => import('./modules/board/board.module').then((m) => m.BoardModule),
   },
   {
-    path: 'agency',
-    canActivateChild: [AgencyGuard],
-    loadChildren: () => import('./modules/agency/agency.module').then((m) => m.AgencyModule),
+    path: 'agent',
+    canActivateChild: [AgentGuard],
+    loadChildren: () => import('./modules/agent/agent.module').then((m) => m.AgentModule),
   },
 ];
 

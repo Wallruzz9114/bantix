@@ -9,8 +9,8 @@ frontend/website/src/environments
 .vscode
 backend/API/bin
 backend/API/obj
-backend/Library/bin
-backend/Library/obj
+backend/Libraries/bin
+backend/Libraries/obj
 backend/API/Logs
 backend/API/Properties
 backend/API/appsettings.Development.json

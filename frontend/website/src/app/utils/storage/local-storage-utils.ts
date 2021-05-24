@@ -5,8 +5,8 @@ export class LocalStorageUtils {
     return localStorage.getItem(environment.userToken);
   }
 
-  public static getAgencyToken(): string | null {
-    return localStorage.getItem(environment.agencyToken);
+  public static getAgentToken(): string | null {
+    return localStorage.getItem(environment.agentToken);
   }
 
   public static clearStorage(): void {

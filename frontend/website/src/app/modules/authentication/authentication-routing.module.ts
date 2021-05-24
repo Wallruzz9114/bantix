@@ -9,7 +9,7 @@ const routes: Routes = [
     component: AuthenticationComponent,
     children: [
       { path: '', component: RegisterComponent },
-      { path: 'cadastro', component: RegisterComponent },
+      { path: 'register', component: RegisterComponent },
     ],
   },
 ];

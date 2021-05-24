@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Core.Services.Interfaces
+namespace Data.Interfaces
 {
     public interface IUserService
     {

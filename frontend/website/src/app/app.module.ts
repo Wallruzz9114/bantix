@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AgencyGuard } from './guards/agency.guard';
+import { AgentGuard } from './guards/agent.guard';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { UserGuard } from './guards/user.guard';
 
@@ -13,7 +13,7 @@ import { UserGuard } from './guards/user.guard';
   providers: [
     { provide: LOCALE_ID, useValue: 'en-US' },
     AuthenticationGuard,
-    AgencyGuard,
+    AgentGuard,
     UserGuard,
   ],
   bootstrap: [AppComponent],
