@@ -25,12 +25,19 @@ namespace API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+                app.UseHttpsRedirection();
             }
 
-            app.UseHttpsRedirection();
             app.UseRouting();
+<<<<<<< HEAD
             app.UseCors(c => c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
+=======
+            app.UseCors(c => c
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+>>>>>>> added-agent
             app.UseAuthorization();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }

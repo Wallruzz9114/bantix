@@ -3,7 +3,11 @@ using Libraries.Helpers;
 
 namespace Data.ViewModels
 {
+<<<<<<< HEAD:backend/Data/ViewModels/AgentLoginInputViewModel.cs
     public class AgentLoginInputViewModel
+=======
+    public class AgentLoginViewModel
+>>>>>>> added-agent:backend/Data/ViewModels/AgencyLoginViewModel.cs
     {
         [Required(ErrorMessage = "Invalid identifier")]
         [MinLength(7, ErrorMessage = "Invalid identifier")]

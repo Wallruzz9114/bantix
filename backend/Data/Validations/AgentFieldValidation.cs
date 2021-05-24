@@ -8,9 +8,6 @@ namespace Data.Validations
     {
         public AgentFieldValidation(Agent agent) : base(agent)
         {
-            RuleFor(a => a.Id)
-                .NotEmpty().WithMessage("Please enter an id.");
-
             RuleFor(a => a.FullName)
                 .NotEmpty().WithMessage("Please enter an full name.")
                 .MaximumLength(100).WithMessage("The agent name cannot exceed 100 characters.");

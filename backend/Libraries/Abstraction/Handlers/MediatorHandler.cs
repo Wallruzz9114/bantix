@@ -5,7 +5,7 @@ using Libraries.Abstraction.Events;
 using Libraries.Abstraction.Interfaces;
 using MediatR;
 
-namespace Libraries.Abstraction.Implementations
+namespace Libraries.Abstraction.Handlers
 {
     public class MediatorHandler : IMediatorHandler
     {

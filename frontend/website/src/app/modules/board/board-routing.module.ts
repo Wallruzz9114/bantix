@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BoardComponent } from './board.component';
-import { MovementsComponent } from './components/movements/movements.component';
+import { BoardTransactionComponent } from './components/board-transaction/board-transaction.component';
 
 const routes: Routes = [
   {
     path: '',
     component: BoardComponent,
     children: [
-      { path: '', component: MovementsComponent },
-      { path: 'movements', component: MovementsComponent },
+      { path: '', component: BoardTransactionComponent },
+      { path: 'transactions', component: BoardTransactionComponent },
     ],
   },
 ];

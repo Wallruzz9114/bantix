@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
-using Core.Services.Interfaces;
+using Data.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 
-namespace Core.Services.Implementations
+namespace Core.Services
 {
     public class UserService : IUserService
     {
