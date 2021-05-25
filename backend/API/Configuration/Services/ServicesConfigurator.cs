@@ -1,13 +1,10 @@
 using System;
 using System.Text;
-<<<<<<< HEAD
-using Core.Services.Implementations;
-using Core.Services.Interfaces;
-=======
 using Core.Services;
->>>>>>> added-agent
 using Data;
 using Data.Interfaces;
+using Data.Repositories.Implementations;
+using Data.Repositories.Interfaces;
 using Libraries.Abstraction.Handlers;
 using Libraries.Abstraction.Interfaces;
 using Libraries.Abstraction.Notifications;
@@ -40,27 +37,12 @@ namespace API.Configuration.Services
             services.AddScoped<INotificationHandler<EntityNotification>, EntityNotificationHandler>();
             services.AddScoped<IMediatorHandler, MediatorHandler>();
             services.AddScoped<IUserService, UserService>();
-<<<<<<< HEAD
             services.AddMediatR(typeof(Startup));
             services.AddScoped<INotificationHandler<EntityNotification>, EntityNotificationHandler>();
             services.AddScoped<IAgentRepository, AgentRepository>();
 
             var key = Encoding.ASCII
                 .GetBytes(configuration.GetSection("Authentication").GetSection("secretKey").Value);
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-=======
 
             services.AddMediatR(typeof(Startup).Assembly);
 
@@ -79,7 +61,6 @@ namespace API.Configuration.Services
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(secretKey),
->>>>>>> added-agent
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
@@ -89,11 +70,7 @@ namespace API.Configuration.Services
             {
                 options.AddPolicy("Agent", policy => { policy.RequireClaim("agent", "1"); });
                 options.AddPolicy("Customer", policy => { policy.RequireClaim("customer", "1"); });
-<<<<<<< HEAD
                 options.AddPolicy("Authenticated", policy => { policy.RequireAuthenticatedUser(); });
-=======
-                options.AddPolicy("Autenticated", policy => { policy.RequireAuthenticatedUser(); });
->>>>>>> added-agent
 
                 options.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)

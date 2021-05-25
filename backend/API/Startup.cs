@@ -29,15 +29,12 @@ namespace API
             }
 
             app.UseRouting();
-<<<<<<< HEAD
             app.UseCors(c => c.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
-=======
             app.UseCors(c => c
                .AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader());
->>>>>>> added-agent
             app.UseAuthorization();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }

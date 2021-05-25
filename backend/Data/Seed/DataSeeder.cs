@@ -20,7 +20,7 @@ namespace Data.Seed
                         BusinessId = "5682ce9",
                         Password = "Pa$$w0rd",
                         AgentNumber = "007",
-                        PIN = "3498"
+                        PIN = "2469"
                     }
                 };
 

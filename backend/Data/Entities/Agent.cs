@@ -5,16 +5,14 @@ namespace Data.Entities
 {
     public class Agent : Entity<Agent>
     {
-        private Agent() { }
+        public string FullName { get; set; }
+        public string DisplayName { get; set; }
+        public string BusinessId { get; set; }
+        public string Password { get; set; }
+        public string AgentNumber { get; set; }
+        public string PIN { get; set; }
 
-        public string FullName { get; private set; }
-        public string DisplayName { get; private set; }
-        public string BusinessId { get; private set; }
-        public string Password { get; private set; }
-        public int AgentNumber { get; private set; }
-        public int PIN { get; private set; }
-
-        public override bool IsConsistent()
+        public override bool IsValid()
         {
             ValidationResult = new AgentFieldValidation(this).Validate(this);
             return ValidationResult.IsValid;

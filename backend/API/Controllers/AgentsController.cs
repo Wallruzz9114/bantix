@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using AutoMapper;
 using Core.Utilities;
-using Core.ViewModels;
 using Data.Enums;
 using Data.Interfaces;
 using Data.Repositories.Interfaces;
@@ -38,7 +37,7 @@ namespace API.Controllers
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public IActionResult Login([FromBody] AgentLoginViewModel loginViewModel)
+        public IActionResult Login([FromBody] AgentLoginInputViewModel loginViewModel)
         {
             var agent = _agentRepository
                 .Find(a => a.BusinessId == loginViewModel.BusinessId && a.Password == loginViewModel.EncryptedPassword)

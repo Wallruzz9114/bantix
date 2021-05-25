@@ -1,13 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using Libraries.Helpers;
+using Data.Helpers;
 
 namespace Data.ViewModels
 {
-<<<<<<< HEAD:backend/Data/ViewModels/AgentLoginInputViewModel.cs
     public class AgentLoginInputViewModel
-=======
-    public class AgentLoginViewModel
->>>>>>> added-agent:backend/Data/ViewModels/AgencyLoginViewModel.cs
     {
         [Required(ErrorMessage = "Invalid identifier")]
         [MinLength(7, ErrorMessage = "Invalid identifier")]
@@ -21,7 +17,7 @@ namespace Data.ViewModels
         {
             get
             {
-                return Cryptography.EncryptWithMD5(Password);
+                return Cryptography.HashPassword(Password);
             }
         }
     }
